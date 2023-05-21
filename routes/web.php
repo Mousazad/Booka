@@ -19,9 +19,17 @@ use App\Http\Middleware\IsAdmin;
 |
 */
 
+Route::get('/usual', function () {
+    return view('usual');
+})->name('usual');
+Route::get('/unusual', function () {
+    return view('unusual');
+})->name('unusual');
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
 
 //Route::middleware('auth')->group(function () {
 	Route::get('/book/index', [BookController::class, 'index'] )->name('book.index');
