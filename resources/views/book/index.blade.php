@@ -73,10 +73,11 @@
 						</ul>
 					</div>
 				@endif
-				<form method=POST Action="{{ URL::route('book.store')}}">
+				<form method="POST" Action="{{ URL::route('book.store')}}" enctype="multipart/form-data">
 					@csrf
 					<input style="margin-bottom: 10px;" type="text" placeholder="Title" name="title" required><br/>
-					<input style="margin-bottom: 10px;" type="number" placeholder="Publication Year" name="pub_year" required><br/>
+					<input style="margin-bottom: 10px;" type="number" placeholder="Publication Year" name="pubyear" required><br/>
+					<input style="margin-bottom: 10px;" type="file" name="cover" id="cover"><br/>						
 					<button style="display: inline-block;  background-color: green; padding: 5px;color: #ffffff; text-align: center;  border-radius: 5px;" type="submit">	Add Book	</button>
 				</form>
 				

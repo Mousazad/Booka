@@ -1,5 +1,5 @@
-<h1>It is unusual Page</h1>
 @extends('layouts.main')
+<h1>It is unusual Page</h1>
 
 @section('mohtav2')
 	1- ali agha

@@ -44,7 +44,7 @@
 					<a style="font-size:15px;color:orange;margin-left: 10px;" href="{{ URL::route('book.edit',$book->id)}}">edit</a> </h2>
 				</div>
 				<hr>
-				
+				<img src="{{'/storage/'.$book->cover}}" alt="cover" width="250"> 
 				<table>
 					<tr>
 						<th style="text-align:left; padding:0 10px 0 10px">id</th>

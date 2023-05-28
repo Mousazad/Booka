@@ -1,5 +1,5 @@
-<h1>It is usual Page</h1>
 @extends('layouts.main')
+
 
 @section('mohtav1')
 	1- java 
