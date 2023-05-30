@@ -8,6 +8,8 @@ use Illuminate\Http\Response;
 use App\Models\Book;
 use App\Models\Author;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
@@ -38,6 +40,14 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+		//Gate::authorize('create_book');
+		//$this->authorize('create');
+		//error_log(Auth::user()->role);
+		if ($request->user()->cannot('create', Book::class)) {
+            abort(403);
+        }
+		 //$this->authorize('create', Book::class);
+		
 		$request->validate([
 			'title' => 'string|required',
 			'pubyear' => 'int|required|max:2023',

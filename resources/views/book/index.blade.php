@@ -79,12 +79,8 @@
 					<input style="margin-bottom: 10px;" type="number" placeholder="Publication Year" name="pubyear" required><br/>
 					<input style="margin-bottom: 10px;" type="file" name="cover" id="cover"><br/>						
 					<button style="display: inline-block;  background-color: green; padding: 5px;color: #ffffff; text-align: center;  border-radius: 5px;" type="submit">	Add Book	</button>
-				</form>
-				
+				</form>		
 			</div>
-
-
-
 		</div>
 
     </body>

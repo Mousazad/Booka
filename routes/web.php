@@ -38,7 +38,7 @@ Route::get('/', function () {
 	Route::get('/book/edit/{book}', [BookController::class, 'edit'] )->name('book.edit');
 	Route::get('/book/detach/{book}/{author}', [BookController::class, 'detachAuthor'] )->name('book.detach');
 	Route::get('/book/attach/{book}/{author}', [BookController::class, 'attachAuthor'] )->name('book.attach');
-	Route::post('/book/store', [BookController::class, 'store'] )->name('book.store')->middleware(IsAdmin::class);
+	Route::post('/book/store', [BookController::class, 'store'] )->name('book.store');
 	Route::post('/book/update/{book}', [BookController::class, 'update'] )->name('book.update')->middleware(IsAdmin::class);
 	Route::get('/author/index', [AuthorController::class, 'index'] )->name('author.index');
 	Route::post('/author/search', [AuthorController::class, 'search'] )->name('author.search');
